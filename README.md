@@ -1,5 +1,7 @@
 # Planning and Reasoning Project
 
+## PDDL section
+
 ~~~bash
 docker run  -v./pddl:/computer -it --privileged --rm docker.io/library/myplauntils bash
 planutils activate
