@@ -3,7 +3,7 @@
 
 
 
-!!!!! Did you initilize the evaluator ??????
+!!!!! Did you initialize the evaluator ??????
 
 
 
@@ -12,7 +12,7 @@
 [to_hand(d1, t2), to_hand_card(h2, d1, t2), to_hand_card(d3, h2, t1), to_hand_card(h4, d3, t1), from_hand(h4, t2), from_hand_card(d3, h4, t2), from_hand_card(h2, d3, t2), from_hand_card(d1, h2, t2)]
 
 
-## Inlegal task
+## Illegal task
 
 [to_hand(d1, t2), tableau_tableau_card(h2, d1, t2, t1)]
 
