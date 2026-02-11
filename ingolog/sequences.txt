@@ -1,0 +1,31 @@
+
+
+
+
+
+!!!!! Did you initilize the evaluator ??????
+
+
+
+## Legal task
+
+[to_hand(d1, t2), to_hand_card(h2, d1, t2), to_hand_card(d3, h2, t1), to_hand_card(h4, d3, t1), from_hand(h4, t2), from_hand_card(d3, h4, t2), from_hand_card(h2, d3, t2), from_hand_card(d1, h2, t2)]
+
+
+## Inlegal task
+
+[to_hand(d1, t2), tableau_tableau_card(h2, d1, t2, t1)]
+
+
+## Projection (True)
+free(h4).
+[stock_foundation(h1,b1), tableau_foundation(d1,t2,b2),stock_foundation_card(d2,d1,b2),tableau_foundation_card(h2,h1,t2,b1),tableau_foundation_card(d3,d2,t1,b2)].
+
+## Projection (False)
+free(h4).
+[stock_foundation(h1,b1), tableau_foundation(d1,t2,b2),stock_foundation_card(d2,d1,b2)].
+
+
+## Exogenous action
+
+exogenous_swap(d1, h2, t2).

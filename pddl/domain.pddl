@@ -1,136 +1,133 @@
-;Header and description
-
 (define (domain klondike-solitaire)
-
-;remove requirements that are not needed
-(:requirements 
+  (:requirements
     :strips
     :typing
-    :equality
     :negative-preconditions
     :disjunctive-preconditions
     :numeric-fluents
-    :conditional-effects
-)
+    
+  )
 
-(:types
+  ;; ======================
+  (:types
     card
     tableau
     foundation
+    auxt
+    )
+
+  ;; ======================
+  (:predicates
+
+  
+    ;; --- Relation of stacking ---
+    (on ?c1 - card ?c2 - card)   ; c1 card on c2 card
+    (clear ?c - card)           ; not card on c1
+
+    ;; --- Tableau ---
+    (on-tableau ?c - card ?t - tableau) ;card c on t tableau
+    
+    (empty-tableau ?t - tableau) ;empty-tableau (no cards)
+
+    ;; --- Foundation ---
+    (on-foundation ?c - card ?f - foundation) ;card c on foundation f
+    (empty-foundation ?f - foundation ) ; foundation f empty
+
+    ;; --- Stock ---
+    (in-stock ?c - card) ; card c in stock 
+
+    ;; --- has card ---
+    (has-card ?c - card) ; the player has card c
+    ;; --- free hands ---
+    (free) ; the player has no cards in hand
+    ;;--relation of tableau--
+    (can-stack ?c1 - card ?c2 - card)
+    ;;--relation of foundation--
+    (put ?c1 - card ?c2 - card)
+
+    ;; --- max card ---
+    (max-card ?c - card)
+    ;; --- min card ---
+    (min-card ?c - card)
+
+    ;; --- aux-tableau ---
+    (on-aux-tableau ?c - card) ; card on aux-tableau
+    (empty-aux-tableau ?t - auxt) ;aux-tableau is empty
+    (first-aux ?c - card) ; card c is the first in aux-tableau
+    (can-stack-aux ?c1 - card ?c2 - card ) ; relation of stack in aux-tableau
+
+  )
+
+(:functions
+  (foundation-count ?f - foundation)
+  
 )
 
-; un-comment following line if constants are needed
-;(:constants )
+;; --- action pick from the stack---
+(:action pick-card-stock
+  :parameters (?c - card )
+  :precondition(and(in-stock ?c)(free))
+  :effect (and(has-card ?c)(not(free))(not(in-stock ?c))))
 
-(:predicates ;todo: define predicates here
-    (on ?c1 ?c2 - card)
-    (on-t ?c - card ?t - tableau)
-    (on-f ?c - card ?f - foundation)
-    (free ?c - card)
-    (free-t ?t - tableau)
-    (free-f ?f - foundation)
-    (can-fund ?c1 ?c2 - card)
-    (can-tab ?c1 ?c2 - card)
-    (max-rank ?c - card)
-    (min-rank ?c - card)
-    (in-stock ?c - card)
-)
+;; --- action pick from tableau---
+(:action pick-card-card
+  :parameters (?c1 - card ?c2 - card )
+  :precondition(and(free)(clear ?c1)(on ?c1 ?c2)(not(in-stock ?c1))(not(on-aux-tableau ?c1 )))
+  :effect (and(has-card ?c1)(not(free))(clear ?c2)(not(on ?c1 ?c2))))
 
+;; --- action pick from tableau its last card---
+(:action pick-last-card-tableau
+  :parameters (?c1 - card ?t - tableau)
+  :precondition(and(on-tableau ?c1 ?t)(free)(clear ?c1))
+  :effect (and(has-card ?c1)(not(free))(not(on-tableau ?c1 ?t))(empty-tableau ?t)))
 
-(:functions ;todo: define numeric functions here
-    (foundation-count ?f - foundation)
-)
+;; --- action drop card to tableau not empty---
+(:action drop-card-tableau-not-free
+  :parameters (?c1 - card ?c2 - card  )
+  :precondition(and(has-card ?c1)(clear ?c2)(can-stack ?c1  ?c2 )(not(on-aux-tableau ?c2)))
+  :effect (and(on ?c1 ?c2)(not(clear ?c2))(clear ?c1)(free)(not(has-card ?c1))))
 
-(:action stock-tableau
-    :parameters (?c1 ?c2 - card ?t - tableau)
-    :precondition (and 
-        (in-stock ?c1)
-        (or 
-            (and (free-t ?t)(max-rank ?c1))
-            (and (on-t ?c2 ?t)(can-tab ?c1 ?c2)(free ?c2))
-        )
-    )
-    :effect (and 
-        (on-t ?c1 ?t)
-        (free ?c1)
-        (when (free-t ?t)(not(free-t ?t)))
-        (when (on-t ?c2 ?t) (and(not(free ?c2))(on ?c1 ?c2)))
-    )
-)
+;; --- action drop to from tableau empty---
+(:action drop-card-tableau-free
+  :parameters (?c1 - card ?t - tableau )
+  :precondition(and(has-card ?c1)(empty-tableau ?t)(max-card ?c1))
+  :effect (and(free)(clear ?c1)(not(empty-tableau ?t))(on-tableau ?c1 ?t)(not(has-card ?c1))))
 
-(:action tableau-tableau
-    :parameters (?c1 ?c2 - card ?t1 ?t2 - tableau)
-    :precondition (and 
-        (on-t ?c1 ?t1)
-        (free ?c1)
-        (or
-            (and (on-t ?c2 ?t2)(free ?c2)(can-tab ?c1 ?c2))
-            (and 
-                (free-t ?t2)
-                (max-rank ?c1)
-                (exists (?c - card) (and 
-                    (on-t ?c ?t1)
-                    (not (= ?c ?c1))
-                ))    
-            )
-        )
-    )
-    :effect (and 
-        (not (on-t ?c1 ?t1))
-        (on-t ?c1 ?t2)
-        (forall (?c - card) 
-            (when (on ?c1 ?c) 
-                (and (not (on ?c1 ?c))(free ?c))
-            )
-        )
-        (when (on-t ?c2 ?t2) (and (not(free ?c2))(on ?c1 ?c2)))
-        (when (free-t ?t2) (not (free-t ?t2)))
-    )
-)
+;; --- action drop card to foundation not empty---
+(:action drop-card-foundation-not-free
+  :parameters (?c1 - card ?c2 - card ?f - foundation)
+  :precondition(and(has-card ?c1)(clear ?c2)(on-foundation ?c2 ?f)(put ?c1 ?c2))
+  :effect (and(clear ?c1)(not(clear ?c2))(free)(on-foundation ?c1 ?f)(not(has-card ?c1))(increase (foundation-count ?f) 1)))
+  
+;; --- action drop card to foundation empty---
+(:action drop-card-foundation-free
+  :parameters (?c1 - card ?f - foundation)
+  :precondition(and(has-card ?c1)(empty-foundation ?f)(min-card ?c1))
+  :effect (and(free)(clear ?c1)(not(empty-foundation ?f))(on-foundation ?c1 ?f)(not(has-card ?c1))(increase (foundation-count ?f) 1)))
 
-(:action stock-foundation
-    :parameters (?c1 ?c2 - card ?f - foundation)
-    :precondition (and 
-        (in-stock ?c1)
-        (or 
-            (and (on-f ?c2 ?f)(free ?c2)(can-fund ?c1 ?c2))
-            (and (free-f ?f)(min-rank ?c1))
-        )
-    )
-    :effect (and 
-        (increase (foundation-count ?f) 1)
-        (not (in-stock ?c1))
-        (free ?c1)
-        (on-f ?c1 ?f)
-        (when (on-f ?c2 ?f) (and (not(free ?c2))(on ?c1 ?c2)))
-        (when (free-f ?f) (not (free-f ?f)))
-    )
-)
+;; --- action pick from aux-tableau its last card---
+(:action pick-last-card-aux-tableau
+  :parameters (?c1 - card ?t - auxt)
+  :precondition(and(free)(clear ?c1)(on-aux-tableau ?c1 )(first-aux ?c1))
+  :effect (and(not(free))(has-card ?c1)(empty-aux-tableau ?t)(not(on-aux-tableau ?c1))(not(first-aux ?c1))))
 
-(:action tableau-foundation
-    :parameters (?c1 ?c2 - card ?t - tableau ?f - foundation)
-    :precondition (and 
-        (on-t ?c1 ?t)
-        (free ?c1)
-        (or 
-            (and (free-f ?f)(min-rank ?c1))
-            (and (on-f ?c2 ?f)(can-fund ?c1 ?c2)(free ?c2))    
-        )
-    )
-    :effect (and 
-        (increase (foundation-count ?f) 1)
-        (on-f ?c1 ?f)
-        (not (on-t ?c1 ?t))
-        (forall (?c - card) 
-            (when (on ?c1 ?c) 
-                (and (not (on ?c1 ?c))(free ?c))
-            )
-        )
-        (when (free-f ?f)(not(free-f ?f)))
-        (when (on-f ?c2 ?f)(and (not(free ?c2))(on ?c1 ?c2)))
-    )
-)
+;; --- action pick from aux-tableau ---
+(:action pick-card-aux-tableau
+  :parameters (?c1 - card ?c2 - card )
+  :precondition(and(free)(clear ?c1)(on ?c1 ?c2)(on-aux-tableau ?c1 )(on-aux-tableau ?c2 ))
+  :effect (and(not(free))(has-card ?c1)(clear ?c2)(not(on-aux-tableau ?c1 ))(not(on ?c1 ?c2))))
 
+;; --- action drop card to aux-tableau empty---
+(:action drop-card-aux-tableau-free
+  :parameters (?c1 - card ?t - auxt )
+  :precondition(and(has-card ?c1)(empty-aux-tableau ?t))
+  :effect (and(free)(clear ?c1)(first-aux ?c1)(not(empty-aux-tableau ?t))(on-aux-tableau ?c1 )(not(has-card ?c1))))
+
+;; --- action drop card to aux-tableau ---
+(:action drop-card-aux-tableau-not-free
+  :parameters (?c1 - card ?c2 - card )
+  :precondition(and(has-card ?c1)(on-aux-tableau ?c2)(clear ?c2)(can-stack-aux ?c1  ?c2 ))
+  :effect (and(on ?c1 ?c2)(not(clear ?c2))(clear ?c1)(free)(not(has-card ?c1))(on-aux-tableau ?c1)))
 
 
 )

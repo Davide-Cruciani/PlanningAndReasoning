@@ -1,0 +1,176 @@
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 44
+Aibr Preprocessing
+|F|:529
+|X|:4
+|A|:769
+|P|:0
+|E|:0
+H1 Setup Time (msec): 13
+ g(n)= 2.0 h(n)=44.0
+ g(n)= 3.0 h(n)=40.0
+ g(n)= 27.0 h(n)=39.0
+ g(n)= 42.0 h(n)=38.0
+ g(n)= 46.0 h(n)=37.0
+ g(n)= 48.0 h(n)=36.0
+ g(n)= 50.0 h(n)=35.0
+ g(n)= 60.0 h(n)=33.0
+ g(n)= 62.0 h(n)=32.0
+ g(n)= 64.0 h(n)=31.0
+ g(n)= 66.0 h(n)=30.0
+ g(n)= 68.0 h(n)=29.0
+ g(n)= 70.0 h(n)=27.0
+ g(n)= 72.0 h(n)=26.0
+ g(n)= 74.0 h(n)=25.0
+ g(n)= 76.0 h(n)=24.0
+ g(n)= 78.0 h(n)=23.0
+ g(n)= 80.0 h(n)=22.0
+ g(n)= 84.0 h(n)=20.0
+ g(n)= 86.0 h(n)=19.0
+ g(n)= 90.0 h(n)=17.0
+ g(n)= 92.0 h(n)=16.0
+ g(n)= 94.0 h(n)=15.0
+ g(n)= 96.0 h(n)=14.0
+ g(n)= 98.0 h(n)=13.0
+ g(n)= 102.0 h(n)=12.0
+ g(n)= 104.0 h(n)=11.0
+ g(n)= 106.0 h(n)=10.0
+ g(n)= 108.0 h(n)=8.0
+ g(n)= 110.0 h(n)=7.0
+ g(n)= 112.0 h(n)=5.0
+ g(n)= 114.0 h(n)=3.0
+ g(n)= 115.0 h(n)=2.0
+ g(n)= 117.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (pick-card-card s6 d1)
+1.0: (drop-card-aux-tableau-free s6 tbx)
+2.0: (pick-card-stock h3)
+3.0: (drop-card-tableau-not-free h3 s4)
+4.0: (pick-card-stock c2)
+5.0: (drop-card-tableau-not-free c2 h3)
+6.0: (pick-card-card h5 d6)
+7.0: (drop-card-tableau-not-free h5 c6)
+8.0: (pick-card-card d1 h7)
+9.0: (drop-card-tableau-not-free d1 c2)
+10.0: (pick-last-card-aux-tableau s6 tbx)
+11.0: (drop-card-tableau-not-free s6 h7)
+12.0: (pick-card-card d1 c2)
+13.0: (drop-card-foundation-free d1 f1)
+14.0: (pick-card-card d6 c1)
+15.0: (drop-card-aux-tableau-free d6 tbx)
+16.0: (pick-card-card d2 c3)
+17.0: (drop-card-foundation-not-free d2 d1 f1)
+18.0: (pick-card-card c1 s7)
+19.0: (drop-card-tableau-not-free c1 h2)
+20.0: (pick-last-card-aux-tableau d6 tbx)
+21.0: (drop-card-tableau-not-free d6 s7)
+22.0: (pick-card-card c1 h2)
+23.0: (drop-card-aux-tableau-free c1 tbx)
+24.0: (pick-card-card h5 c6)
+25.0: (drop-card-tableau-not-free h5 s6)
+26.0: (pick-last-card-aux-tableau c1 tbx)
+27.0: (drop-card-foundation-free c1 f3)
+28.0: (pick-card-card c6 h1)
+29.0: (drop-card-aux-tableau-free c6 tbx)
+30.0: (pick-card-card c2 h3)
+31.0: (drop-card-foundation-not-free c2 c1 f3)
+32.0: (pick-card-card c5 h6)
+33.0: (drop-card-tableau-not-free c5 d6)
+34.0: (pick-card-card h1 d8)
+35.0: (drop-card-foundation-free h1 f2)
+36.0: (pick-card-card h2 s3)
+37.0: (drop-card-foundation-not-free h2 h1 f2)
+38.0: (pick-card-stock d3)
+39.0: (drop-card-foundation-not-free d3 d2 f1)
+40.0: (pick-card-card c3 d4)
+41.0: (drop-card-foundation-not-free c3 c2 f3)
+42.0: (pick-card-card d4 s2)
+43.0: (drop-card-foundation-not-free d4 d3 f1)
+44.0: (pick-card-card s3 c4)
+45.0: (drop-card-tableau-not-free s3 d4)
+46.0: (pick-card-card c4 d5)
+47.0: (drop-card-foundation-not-free c4 c3 f3)
+48.0: (pick-card-card c5 d6)
+49.0: (drop-card-foundation-not-free c5 c4 f3)
+50.0: (pick-card-card h3 s4)
+51.0: (drop-card-foundation-not-free h3 h2 f2)
+52.0: (pick-last-card-aux-tableau c6 tbx)
+53.0: (drop-card-foundation-not-free c6 c5 f3)
+54.0: (pick-card-card d5 h4)
+55.0: (drop-card-aux-tableau-free d5 tbx)
+56.0: (pick-card-card h4 s9)
+57.0: (drop-card-foundation-not-free h4 h3 f2)
+58.0: (pick-card-card h5 s6)
+59.0: (drop-card-foundation-not-free h5 h4 f2)
+60.0: (pick-card-card h6 s1)
+61.0: (drop-card-foundation-not-free h6 h5 f2)
+62.0: (pick-card-card s6 h7)
+63.0: (drop-card-aux-tableau-not-free s6 d5)
+64.0: (pick-card-card s1 d7)
+65.0: (drop-card-foundation-free s1 f4)
+66.0: (pick-last-card-tableau s2 t6)
+67.0: (drop-card-foundation-not-free s2 s1 f4)
+68.0: (pick-card-card s3 d4)
+69.0: (drop-card-foundation-not-free s3 s2 f4)
+70.0: (pick-last-card-tableau s4 t7)
+71.0: (drop-card-foundation-not-free s4 s3 f4)
+72.0: (pick-card-stock s5)
+73.0: (drop-card-foundation-not-free s5 s4 f4)
+74.0: (pick-card-aux-tableau s6 d5)
+75.0: (drop-card-tableau-not-free s6 d7)
+76.0: (pick-last-card-aux-tableau d5 tbx)
+77.0: (drop-card-foundation-not-free d5 d4 f1)
+78.0: (pick-card-card h7 c7)
+79.0: (drop-card-aux-tableau-free h7 tbx)
+80.0: (pick-card-card d6 s7)
+81.0: (drop-card-foundation-not-free d6 d5 f1)
+82.0: (pick-card-card s6 d7)
+83.0: (drop-card-foundation-not-free s6 s5 f4)
+84.0: (pick-card-card d7 c8)
+85.0: (drop-card-foundation-not-free d7 d6 f1)
+86.0: (pick-card-card d8 s8)
+87.0: (drop-card-foundation-not-free d8 d7 f1)
+88.0: (pick-card-card c7 d9)
+89.0: (drop-card-foundation-not-free c7 c6 f3)
+90.0: (pick-card-card s7 h8)
+91.0: (drop-card-foundation-not-free s7 s6 f4)
+92.0: (pick-card-card s8 h9)
+93.0: (drop-card-foundation-not-free s8 s7 f4)
+94.0: (pick-last-card-aux-tableau h7 tbx)
+95.0: (drop-card-foundation-not-free h7 h6 f2)
+96.0: (pick-card-card h8 c9)
+97.0: (drop-card-foundation-not-free h8 h7 f2)
+98.0: (pick-card-card h9 c10)
+99.0: (drop-card-foundation-not-free h9 h8 f2)
+100.0: (pick-card-card s9 h10)
+101.0: (drop-card-foundation-not-free s9 s8 f4)
+102.0: (pick-card-card d9 s10)
+103.0: (drop-card-aux-tableau-free d9 tbx)
+104.0: (pick-card-card c8 s9)
+105.0: (drop-card-foundation-not-free c8 c7 f3)
+106.0: (pick-last-card-tableau s10 t3)
+107.0: (drop-card-foundation-not-free s10 s9 f4)
+108.0: (pick-card-card c9 d10)
+109.0: (drop-card-foundation-not-free c9 c8 f3)
+110.0: (pick-last-card-tableau c10 t4)
+111.0: (drop-card-foundation-not-free c10 c9 f3)
+112.0: (pick-last-card-tableau h10 t1)
+113.0: (drop-card-foundation-not-free h10 h9 f2)
+114.0: (pick-last-card-aux-tableau d9 tbx)
+115.0: (drop-card-foundation-not-free d9 d8 f1)
+116.0: (pick-last-card-tableau d10 t2)
+117.0: (drop-card-foundation-not-free d10 d9 f1)
+
+Plan-Length:118
+Metric (Search):118.0
+Planning Time (msec): 9095
+Heuristic Time (msec): 8819
+Search Time (msec): 9092
+Expanded Nodes:21850
+States Evaluated:65001
+Number of Dead-Ends detected:17868
+Number of Duplicates detected:19792

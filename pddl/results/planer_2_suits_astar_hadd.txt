@@ -1,0 +1,129 @@
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 25
+Aibr Preprocessing
+|F|:191
+|X|:2
+|A|:233
+|P|:0
+|E|:0
+H1 Setup Time (msec): 9
+ g(n)= 1.0 h(n)=20.0
+ g(n)= 18.0 h(n)=19.0
+ g(n)= 48.0 h(n)=18.0
+ g(n)= 54.0 h(n)=17.0
+ g(n)= 57.0 h(n)=16.0
+ g(n)= 60.0 h(n)=15.0
+ g(n)= 62.0 h(n)=14.0
+ g(n)= 64.0 h(n)=13.0
+ g(n)= 66.0 h(n)=12.0
+ g(n)= 69.0 h(n)=11.0
+ g(n)= 70.0 h(n)=10.0
+ g(n)= 73.0 h(n)=9.0
+ g(n)= 74.0 h(n)=8.0
+ g(n)= 77.0 h(n)=7.0
+ g(n)= 78.0 h(n)=6.0
+ g(n)= 81.0 h(n)=5.0
+ g(n)= 82.0 h(n)=4.0
+ g(n)= 84.0 h(n)=2.0
+ g(n)= 85.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (pick-card-stock h1)
+1.0: (drop-card-foundation-free h1 f2)
+2.0: (pick-card-card h9 s10)
+3.0: (drop-card-aux-tableau-free h9 tbx)
+4.0: (pick-card-card s10 s8)
+5.0: (drop-card-aux-tableau-not-free s10 h9)
+6.0: (pick-card-card s9 h7)
+7.0: (drop-card-tableau-not-free s9 h10)
+8.0: (pick-card-aux-tableau s10 h9)
+9.0: (drop-card-tableau-free s10 t5)
+10.0: (pick-last-card-aux-tableau h9 tbx)
+11.0: (drop-card-tableau-not-free h9 s10)
+12.0: (pick-card-card h7 s6)
+13.0: (drop-card-aux-tableau-free h7 tbx)
+14.0: (pick-card-card s8 h5)
+15.0: (drop-card-tableau-not-free s8 h9)
+16.0: (pick-card-card h5 s3)
+17.0: (drop-card-tableau-not-free h5 s6)
+18.0: (pick-last-card-aux-tableau h7 tbx)
+19.0: (drop-card-tableau-not-free h7 s8)
+20.0: (pick-card-card h5 s6)
+21.0: (drop-card-aux-tableau-free h5 tbx)
+22.0: (pick-card-card s6 h4)
+23.0: (drop-card-tableau-not-free s6 h7)
+24.0: (pick-last-card-aux-tableau h5 tbx)
+25.0: (drop-card-tableau-not-free h5 s6)
+26.0: (pick-last-card-tableau s3 t2)
+27.0: (drop-card-tableau-not-free s3 h4)
+28.0: (pick-card-stock h2)
+29.0: (drop-card-tableau-not-free h2 s3)
+30.0: (pick-card-card s9 h10)
+31.0: (drop-card-aux-tableau-free s9 tbx)
+32.0: (pick-card-card h10 s4)
+33.0: (drop-card-tableau-free h10 t2)
+34.0: (pick-card-card s4 h8)
+35.0: (drop-card-tableau-not-free s4 h5)
+36.0: (pick-last-card-aux-tableau s9 tbx)
+37.0: (drop-card-tableau-not-free s9 h10)
+38.0: (pick-card-stock s1)
+39.0: (drop-card-foundation-free s1 f1)
+40.0: (pick-card-card h8 s2)
+41.0: (drop-card-tableau-not-free h8 s9)
+42.0: (pick-last-card-tableau s2 t4)
+43.0: (drop-card-foundation-not-free s2 s1 f1)
+44.0: (pick-card-card h2 s3)
+45.0: (drop-card-aux-tableau-free h2 tbx)
+46.0: (pick-card-card s3 h4)
+47.0: (drop-card-foundation-not-free s3 s2 f1)
+48.0: (pick-card-card s7 h6)
+49.0: (drop-card-tableau-not-free s7 h8)
+50.0: (pick-card-card s4 h5)
+51.0: (drop-card-foundation-not-free s4 s3 f1)
+52.0: (pick-card-card h6 s5)
+53.0: (drop-card-tableau-not-free h6 s7)
+54.0: (pick-last-card-aux-tableau h2 tbx)
+55.0: (drop-card-foundation-not-free h2 h1 f2)
+56.0: (pick-card-card s5 h3)
+57.0: (drop-card-aux-tableau-free s5 tbx)
+58.0: (pick-last-card-tableau h3 t3)
+59.0: (drop-card-foundation-not-free h3 h2 f2)
+60.0: (pick-last-card-tableau h4 t1)
+61.0: (drop-card-foundation-not-free h4 h3 f2)
+62.0: (pick-card-card h5 s6)
+63.0: (drop-card-foundation-not-free h5 h4 f2)
+64.0: (pick-last-card-aux-tableau s5 tbx)
+65.0: (drop-card-foundation-not-free s5 s4 f1)
+66.0: (pick-card-card h6 s7)
+67.0: (drop-card-foundation-not-free h6 h5 f2)
+68.0: (pick-card-card s6 h7)
+69.0: (drop-card-foundation-not-free s6 s5 f1)
+70.0: (pick-card-card s7 h8)
+71.0: (drop-card-foundation-not-free s7 s6 f1)
+72.0: (pick-card-card h7 s8)
+73.0: (drop-card-foundation-not-free h7 h6 f2)
+74.0: (pick-card-card s8 h9)
+75.0: (drop-card-foundation-not-free s8 s7 f1)
+76.0: (pick-card-card h8 s9)
+77.0: (drop-card-foundation-not-free h8 h7 f2)
+78.0: (pick-card-card h9 s10)
+79.0: (drop-card-foundation-not-free h9 h8 f2)
+80.0: (pick-card-card s9 h10)
+81.0: (drop-card-foundation-not-free s9 s8 f1)
+82.0: (pick-last-card-tableau s10 t5)
+83.0: (drop-card-foundation-not-free s10 s9 f1)
+84.0: (pick-last-card-tableau h10 t2)
+85.0: (drop-card-foundation-not-free h10 h9 f2)
+
+Plan-Length:86
+Metric (Search):86.0
+Planning Time (msec): 210
+Heuristic Time (msec): 166
+Search Time (msec): 208
+Expanded Nodes:1795
+States Evaluated:3461
+Number of Dead-Ends detected:867
+Number of Duplicates detected:1373

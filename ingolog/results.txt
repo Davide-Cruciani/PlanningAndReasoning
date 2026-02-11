@@ -1,0 +1,44 @@
+
+Basic controller
+
+Program has executed to completion!! History done:
+[tableau_foundation_card(d4,d3,t1,b2),
+tableau_foundation_card(h4,h3,t2,b1),
+tableau_foundation_card(h3,h2,t1,b1),
+tableau_tableau(h4,t1,t2),
+tableau_foundation_card(d3,d2,t1,b2),
+tableau_foundation_card(h2,h1,t2,b1),
+stock_foundation_card(d2,d1,b2),
+tableau_foundation(d1,t2,b2),
+stock_foundation(h1,b1)]
+
+Searche controller
+
+Program has executed to completion!! History done:
+[tableau_foundation_card(d4,d3,t1,b2),
+tableau_foundation_card(h4,h3,t2,b1),
+tableau_foundation_card(h3,h2,t1,b1),
+tableau_tableau(h4,t1,t2),
+tableau_foundation_card(d3,d2,t1,b2),
+tableau_foundation_card(h2,h1,t2,b1),
+stock_foundation_card(d2,d1,b2),
+tableau_foundation(d1,t2,b2),
+stock_foundation(h1,b1)]
+
+
+Reactive controller
+Program has executed to completion!! History done:
+[
+    stop_interrupts,
+    tableau_foundation_card(d4,d3,t1,b2),
+    tableau_foundation_card(h4,h3,t2,b1),
+    tableau_foundation_card(h3,h2,t1,b1),
+    tableau_tableau(h4,t1,t2),
+    tableau_foundation_card(d3,d2,t1,b2),
+    stock_foundation_card(d2,d1,b2),
+    tableau_foundation(d1,t2,b2),
+    tableau_foundation_card(h2,h1,t2,b1),
+    notice_event,
+    exogenous_swap(d1,h2,t2),
+    stock_foundation(h1,b1)
+]

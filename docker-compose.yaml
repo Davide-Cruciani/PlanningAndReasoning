@@ -1,7 +1,0 @@
-name: par_planer
-services:
-  planner:
-    image: myplauntils:latest
-    command: bash
-    volumes:
-      - ./pddl:/computer

@@ -1,0 +1,294 @@
+Domain parsed
+Problem parsed
+Grounding..
+Grounding Time: 58
+Aibr Preprocessing
+|F|:1037
+|X|:6
+|A|:1634
+|P|:0
+|E|:0
+H1 Setup Time (msec): 21
+ g(n)= 1.0 h(n)=60.0
+ g(n)= 20.0 h(n)=59.0
+ g(n)= 24.0 h(n)=58.0
+ g(n)= 38.0 h(n)=57.0
+-------------Time: 10s ; Expanded Nodes: 3663 (Avg-Speed 366.0 n/s); Evaluated States: 29754
+ g(n)= 42.0 h(n)=56.0
+-------------Time: 20s ; Expanded Nodes: 8878 (Avg-Speed 443.0 n/s); Evaluated States: 64760
+-------------Time: 30s ; Expanded Nodes: 14012 (Avg-Speed 467.0 n/s); Evaluated States: 99755
+-------------Time: 40s ; Expanded Nodes: 19284 (Avg-Speed 482.0 n/s); Evaluated States: 135210
+-------------Time: 50s ; Expanded Nodes: 25032 (Avg-Speed 500.0 n/s); Evaluated States: 170670
+ g(n)= 78.0 h(n)=55.0
+-------------Time: 60s ; Expanded Nodes: 31386 (Avg-Speed 523.0 n/s); Evaluated States: 207700
+-------------Time: 70s ; Expanded Nodes: 38032 (Avg-Speed 543.0 n/s); Evaluated States: 244869
+-------------Time: 80s ; Expanded Nodes: 44575 (Avg-Speed 557.0 n/s); Evaluated States: 281553
+ g(n)= 86.0 h(n)=54.0
+ g(n)= 90.0 h(n)=53.0
+ g(n)= 92.0 h(n)=52.0
+ g(n)= 106.0 h(n)=51.0
+ g(n)= 110.0 h(n)=50.0
+ g(n)= 112.0 h(n)=49.0
+ g(n)= 114.0 h(n)=47.0
+ g(n)= 118.0 h(n)=45.0
+ g(n)= 122.0 h(n)=43.0
+ g(n)= 126.0 h(n)=41.0
+ g(n)= 130.0 h(n)=39.0
+ g(n)= 132.0 h(n)=38.0
+ g(n)= 134.0 h(n)=37.0
+ g(n)= 138.0 h(n)=36.0
+ g(n)= 140.0 h(n)=35.0
+ g(n)= 144.0 h(n)=34.0
+ g(n)= 146.0 h(n)=32.0
+ g(n)= 150.0 h(n)=31.0
+ g(n)= 154.0 h(n)=30.0
+ g(n)= 158.0 h(n)=29.0
+ g(n)= 160.0 h(n)=27.0
+ g(n)= 166.0 h(n)=26.0
+ g(n)= 176.0 h(n)=24.0
+ g(n)= 180.0 h(n)=23.0
+ g(n)= 182.0 h(n)=22.0
+ g(n)= 186.0 h(n)=21.0
+ g(n)= 188.0 h(n)=20.0
+ g(n)= 192.0 h(n)=18.0
+ g(n)= 196.0 h(n)=17.0
+ g(n)= 198.0 h(n)=15.0
+ g(n)= 202.0 h(n)=13.0
+ g(n)= 204.0 h(n)=12.0
+ g(n)= 206.0 h(n)=10.0
+ g(n)= 210.0 h(n)=8.0
+ g(n)= 212.0 h(n)=6.0
+ g(n)= 214.0 h(n)=4.0
+ g(n)= 216.0 h(n)=2.0
+ g(n)= 217.0 h(n)=1.0
+Problem Solved
+
+Found Plan:
+0.0: (pick-card-card d1 tc5)
+1.0: (drop-card-foundation-free d1 f1)
+2.0: (pick-card-card s1 s3)
+3.0: (drop-card-foundation-free s1 f6)
+4.0: (pick-card-card c1 tc4)
+5.0: (drop-card-aux-tableau-free c1 tbx)
+6.0: (pick-card-stock s2)
+7.0: (drop-card-foundation-not-free s2 s1 f6)
+8.0: (pick-card-card d2 h1)
+9.0: (drop-card-foundation-not-free d2 d1 f1)
+10.0: (pick-last-card-aux-tableau c1 tbx)
+11.0: (drop-card-foundation-free c1 f5)
+12.0: (pick-card-card tc8 c2)
+13.0: (drop-card-aux-tableau-free tc8 tbx)
+14.0: (pick-card-card h1 m3)
+15.0: (drop-card-tableau-not-free h1 tc2)
+16.0: (pick-card-card c2 tc3)
+17.0: (drop-card-foundation-not-free c2 c1 f5)
+18.0: (pick-card-stock c3)
+19.0: (drop-card-foundation-not-free c3 c2 f5)
+20.0: (pick-card-card s3 m4)
+21.0: (drop-card-foundation-not-free s3 s2 f6)
+22.0: (pick-card-card tc3 s4)
+23.0: (drop-card-tableau-not-free tc3 m4)
+24.0: (pick-card-card m3 s6)
+25.0: (drop-card-tableau-not-free m3 tc4)
+26.0: (pick-card-stock m5)
+27.0: (drop-card-tableau-not-free m5 s6)
+28.0: (pick-card-card s4 m10)
+29.0: (drop-card-tableau-not-free s4 m5)
+30.0: (pick-card-stock d3)
+31.0: (drop-card-foundation-not-free d3 d2 f1)
+32.0: (pick-card-card s9 d4)
+33.0: (drop-card-tableau-not-free s9 m10)
+34.0: (pick-card-card d4 h4)
+35.0: (drop-card-foundation-not-free d4 d3 f1)
+36.0: (pick-card-card tc3 m4)
+37.0: (drop-card-tableau-not-free tc3 h4)
+38.0: (pick-card-card m4 d5)
+39.0: (drop-card-tableau-not-free m4 tc5)
+40.0: (pick-card-stock m8)
+41.0: (drop-card-tableau-not-free m8 s9)
+42.0: (pick-card-card m2 c6)
+43.0: (drop-card-tableau-not-free m2 tc3)
+44.0: (pick-card-card d5 tc6)
+45.0: (drop-card-tableau-not-free d5 c6)
+46.0: (pick-card-card s4 m5)
+47.0: (drop-card-tableau-not-free s4 d5)
+48.0: (pick-card-card m5 s6)
+49.0: (drop-card-tableau-not-free m5 tc6)
+50.0: (pick-card-card s4 d5)
+51.0: (drop-card-tableau-not-free s4 m5)
+52.0: (pick-card-stock d9)
+53.0: (drop-card-aux-tableau-not-free d9 tc8)
+54.0: (pick-card-card m3 tc4)
+55.0: (drop-card-tableau-not-free m3 s4)
+56.0: (pick-card-card d5 c6)
+57.0: (drop-card-tableau-not-free d5 s6)
+58.0: (pick-card-card tc4 h5)
+59.0: (drop-card-tableau-not-free tc4 d5)
+60.0: (pick-card-card m3 s4)
+61.0: (drop-card-tableau-not-free m3 tc4)
+62.0: (pick-card-card s4 m5)
+63.0: (drop-card-tableau-not-free s4 h5)
+64.0: (pick-card-card m3 tc4)
+65.0: (drop-card-tableau-not-free m3 s4)
+66.0: (pick-card-card tc4 d5)
+67.0: (drop-card-tableau-not-free tc4 m5)
+68.0: (pick-card-card m3 s4)
+69.0: (drop-card-tableau-not-free m3 tc4)
+70.0: (pick-card-card d5 s6)
+71.0: (drop-card-foundation-not-free d5 d4 f1)
+72.0: (pick-card-card s4 h5)
+73.0: (drop-card-tableau-not-free s4 d5)
+74.0: (pick-card-card h5 d6)
+75.0: (drop-card-tableau-not-free h5 c6)
+76.0: (pick-card-card s4 d5)
+77.0: (drop-card-tableau-not-free s4 h5)
+78.0: (pick-card-card h1 tc2)
+79.0: (drop-card-foundation-free h1 f3)
+80.0: (pick-card-card tc2 m1)
+81.0: (drop-card-tableau-not-free tc2 m3)
+82.0: (pick-card-card m1 d7)
+83.0: (drop-card-tableau-not-free m1 tc2)
+84.0: (pick-card-card d6 s7)
+85.0: (drop-card-foundation-not-free d6 d5 f1)
+86.0: (pick-card-card s7 s8)
+87.0: (drop-card-tableau-not-free s7 m8)
+88.0: (pick-card-card d7 h2)
+89.0: (drop-card-tableau-not-free d7 s8)
+90.0: (pick-card-card h2 m6)
+91.0: (drop-card-foundation-not-free h2 h1 f3)
+92.0: (pick-card-card m6 tc10)
+93.0: (drop-card-tableau-not-free m6 s7)
+94.0: (pick-last-card-tableau tc10 t5)
+95.0: (drop-card-tableau-free tc10 t9)
+96.0: (pick-card-aux-tableau d9 tc8)
+97.0: (drop-card-tableau-not-free d9 tc10)
+98.0: (pick-last-card-aux-tableau tc8 tbx)
+99.0: (drop-card-tableau-not-free tc8 d9)
+100.0: (pick-card-card m2 tc3)
+101.0: (drop-card-aux-tableau-free m2 tbx)
+102.0: (pick-card-stock h3)
+103.0: (drop-card-foundation-not-free h3 h2 f3)
+104.0: (pick-card-card tc3 h4)
+105.0: (drop-card-tableau-not-free tc3 m4)
+106.0: (pick-card-card m1 tc2)
+107.0: (drop-card-foundation-free m1 f2)
+108.0: (pick-card-card h4 tc1)
+109.0: (drop-card-foundation-not-free h4 h3 f3)
+110.0: (pick-card-card s4 h5)
+111.0: (drop-card-foundation-not-free s4 s3 f6)
+112.0: (pick-card-card tc1 s5)
+113.0: (drop-card-foundation-free tc1 f4)
+114.0: (pick-last-card-aux-tableau m2 tbx)
+115.0: (drop-card-foundation-not-free m2 m1 f2)
+116.0: (pick-card-card tc2 m3)
+117.0: (drop-card-foundation-not-free tc2 tc1 f4)
+118.0: (pick-card-card tc3 m4)
+119.0: (drop-card-foundation-not-free tc3 tc2 f4)
+120.0: (pick-card-card m3 tc4)
+121.0: (drop-card-foundation-not-free m3 m2 f2)
+122.0: (pick-card-card tc4 m5)
+123.0: (drop-card-foundation-not-free tc4 tc3 f4)
+124.0: (pick-card-card m4 tc5)
+125.0: (drop-card-foundation-not-free m4 m3 f2)
+126.0: (pick-card-card tc5 h6)
+127.0: (drop-card-foundation-not-free tc5 tc4 f4)
+128.0: (pick-card-card m5 tc6)
+129.0: (drop-card-foundation-not-free m5 m4 f2)
+130.0: (pick-card-card h5 c6)
+131.0: (drop-card-foundation-not-free h5 h4 f3)
+132.0: (pick-last-card-tableau s5 t7)
+133.0: (drop-card-foundation-not-free s5 s4 f6)
+134.0: (pick-card-card s6 h9)
+135.0: (drop-card-foundation-not-free s6 s5 f6)
+136.0: (pick-card-card m6 s7)
+137.0: (drop-card-foundation-not-free m6 m5 f2)
+138.0: (pick-card-card h6 m7)
+139.0: (drop-card-aux-tableau-free h6 tbx)
+140.0: (pick-card-card m7 d8)
+141.0: (drop-card-foundation-not-free m7 m6 f2)
+142.0: (pick-card-card s7 m8)
+143.0: (drop-card-foundation-not-free s7 s6 f6)
+144.0: (pick-card-card d7 s8)
+145.0: (drop-card-foundation-not-free d7 d6 f1)
+146.0: (pick-card-card s8 tc9)
+147.0: (drop-card-foundation-not-free s8 s7 f6)
+148.0: (pick-card-card m8 s9)
+149.0: (drop-card-tableau-not-free m8 tc9)
+150.0: (pick-card-card d8 c9)
+151.0: (drop-card-foundation-not-free d8 d7 f1)
+152.0: (pick-card-card tc8 d9)
+153.0: (drop-card-tableau-not-free tc8 h9)
+154.0: (pick-card-card s9 m10)
+155.0: (drop-card-foundation-not-free s9 s8 f6)
+156.0: (pick-card-card c9 s10)
+157.0: (drop-card-tableau-not-free c9 m10)
+158.0: (pick-last-card-tableau s10 t3)
+159.0: (drop-card-foundation-not-free s10 s9 f6)
+160.0: (pick-card-card d9 tc10)
+161.0: (drop-card-tableau-not-free d9 s10)
+162.0: (pick-last-card-aux-tableau h6 tbx)
+163.0: (drop-card-foundation-not-free h6 h5 f3)
+164.0: (pick-card-card c6 h7)
+165.0: (drop-card-aux-tableau-free c6 tbx)
+166.0: (pick-card-card h7 c8)
+167.0: (drop-card-aux-tableau-not-free h7 c6)
+168.0: (pick-card-card tc6 c7)
+169.0: (drop-card-foundation-not-free tc6 tc5 f4)
+170.0: (pick-card-card c8 tc7)
+171.0: (drop-card-tableau-not-free c8 d9)
+172.0: (pick-card-stock c4)
+173.0: (drop-card-foundation-not-free c4 c3 f5)
+174.0: (pick-card-card tc7 c5)
+175.0: (drop-card-foundation-not-free tc7 tc6 f4)
+176.0: (pick-card-card tc8 h9)
+177.0: (drop-card-foundation-not-free tc8 tc7 f4)
+178.0: (pick-card-card m8 tc9)
+179.0: (drop-card-tableau-not-free m8 c9)
+180.0: (pick-card-card c8 d9)
+181.0: (drop-card-tableau-not-free c8 h9)
+182.0: (pick-last-card-tableau c5 t8)
+183.0: (drop-card-foundation-not-free c5 c4 f5)
+184.0: (pick-card-aux-tableau h7 c6)
+185.0: (drop-card-tableau-not-free h7 c8)
+186.0: (pick-last-card-aux-tableau c6 tbx)
+187.0: (drop-card-foundation-not-free c6 c5 f5)
+188.0: (pick-card-card h7 c8)
+189.0: (drop-card-foundation-not-free h7 h6 f3)
+190.0: (pick-card-card c7 h8)
+191.0: (drop-card-foundation-not-free c7 c6 f5)
+192.0: (pick-card-card c8 h9)
+193.0: (drop-card-foundation-not-free c8 c7 f5)
+194.0: (pick-card-card m8 c9)
+195.0: (drop-card-foundation-not-free m8 m7 f2)
+196.0: (pick-card-card h8 m9)
+197.0: (drop-card-foundation-not-free h8 h7 f3)
+198.0: (pick-card-card h9 c10)
+199.0: (drop-card-foundation-not-free h9 h8 f3)
+200.0: (pick-card-card tc9 h10)
+201.0: (drop-card-foundation-not-free tc9 tc8 f4)
+202.0: (pick-card-card c9 m10)
+203.0: (drop-card-foundation-not-free c9 c8 f5)
+204.0: (pick-last-card-tableau c10 t4)
+205.0: (drop-card-foundation-not-free c10 c9 f5)
+206.0: (pick-card-card d9 s10)
+207.0: (drop-card-foundation-not-free d9 d8 f1)
+208.0: (pick-card-card m9 d10)
+209.0: (drop-card-foundation-not-free m9 m8 f2)
+210.0: (pick-last-card-tableau m10 t6)
+211.0: (drop-card-foundation-not-free m10 m9 f2)
+212.0: (pick-last-card-tableau h10 t2)
+213.0: (drop-card-foundation-not-free h10 h9 f3)
+214.0: (pick-last-card-tableau tc10 t9)
+215.0: (drop-card-foundation-not-free tc10 tc9 f4)
+216.0: (pick-last-card-tableau d10 t1)
+217.0: (drop-card-foundation-not-free d10 d9 f1)
+
+Plan-Length:218
+Metric (Search):218.0
+Planning Time (msec): 83103
+Heuristic Time (msec): 81488
+Search Time (msec): 83100
+Expanded Nodes:46871
+States Evaluated:294683
+Number of Dead-Ends detected:33522
+Number of Duplicates detected:51141
